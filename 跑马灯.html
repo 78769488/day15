@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>跑马灯</title>
+</head>
+<body>
+<div id="i1">欢迎老男孩莅临指导&nbsp;&nbsp;</div>
+<script>
+    function func() {
+        // 获取标签内部的内容
+        var l;
+        var tag = document.getElementById("i1");
+        var content = tag.innerText;
+        l = content.charAt(0);
+        var r = content.substring(1, content.length);
+        var new_content = r + l;
+        tag.innerText = new_content
+    }
+    setInterval("func()", 1000)
+</script>
+
+</body>
+</html>

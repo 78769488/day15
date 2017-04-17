@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <!--设置自适应-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>京东(JD.COM)-正品低价、品质保障、配送及时、轻松购物！</title>
+    <meta name="description"
+          content="京东JD.COM-专业的综合网上购物商城,销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!">
+    <meta name="keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,京东">
+    <link rel="stylesheet" type="text/css" href="style/jd.css">
+</head>
+<body class="index">
+<!--导航栏-->
+<div id="navigation">
+    <div class="w">
+        <div class="nav-left">
+            <div class="dorpdown" id="city">
+                <div onmousemove="ShowCitys()" class="my-city" >武汉站</div>
+                <div class="city-box dorpdown-box">
+                    <div class="city-list">
+                        <div class="city-name">北京</div>
+                        <div class="city-name">上海</div>
+                        <div class="city-name">南京</div>
+                        <div class="city-name">广州</div>
+                        <div class="city-name">武汉</div>
+                        <div class="city-name">天津</div>
+                        <div class="city-name">西安</div>
+                        <div class="city-name">重庆</div>
+                        <div class="city-name">昆明</div>
+                        <div class="city-name">保定</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-right">
+            <div class="nav-menu">
+                <a href="login.html">你好，请登录</a>
+            </div>
+            <div class="nav-menu">
+                <a style="color: #f10215">免费注册</a>
+                <a class="spacer">&Iota;</a>
+            </div>
+            <div class="nav-menu">
+                <a>我的订单</a>
+                <a class="spacer">&Iota;</a>
+            </div>
+            <div class="nav-menu">
+                <a>我的京东</a>
+            </div>
+            <div class="nav-menu">
+                <a>京东会员</a>
+                <a class="spacer">&Iota;</a>
+            </div>
+            <div class="nav-menu">
+                <a>企业采购</a>
+                <a class="spacer">&Iota;</a>
+            </div>
+            <div class="nav-menu">
+                <a>客户服务&or;</a>
+                <a class="spacer">&Iota;</a>
+            </div>
+            <div class="nav-menu">
+                <a>网站导航&or;</a>
+                <a class="spacer">&Iota;</a>
+            </div>
+            <div class="nav-menu">
+                <a>手机京东</a>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+</div>
+
+<!--头部-->
+<div id="header">
+    <!--定义页面主体总分的宽度-->
+    <div class="w">
+        <!--logo图标-->
+        <div id="logo">
+            <div class="logo">
+                <img src="images/logo.png" title="京东购物">
+            </div>
+        </div>
+        <!--搜索区域-->
+        <div id="search">
+            <div class="search-m">
+                <div class="form">
+                    <input class="search-form text" type="text" title="输入要搜索的商品" value="手机">
+                    <input class="button" type="button" value="搜一下">
+                </div>
+            </div>
+        </div>
+        <!--购物车-->
+        <div id="cart">
+            <div class="my-cart">
+                <a>我的购物车</a>
+            </div>
+        </div>
+        <!--热词导航-->
+        <div id="hot-words">
+            <!--<a style="color: red;float: left;margin-right: 10px;padding-left: 90px;">买二免一</a>-->
+            <a class="style-red">买二免一</a>
+            <a>5件5折</a>
+            <a>肥料1元</a>
+            <a>珠宝婚博会</a>
+            <a>5折秒杀</a>
+            <a>洗头膏</a>
+            <a>棉服男2件5折</a>
+            <a>男靴</a>
+        </div>
+        <!--导航组-->
+        <div id="nav-items">
+            <div id="nav-items-group1">
+                <a>秒杀</a>
+                <a>优惠券</a>
+                <a>闪购</a>
+                <a>拍卖</a>
+            </div>
+            <div id="nav-items-group2">
+                <a style="float: left; font-size: 12px;font-weight:normal;height: 20px;">&Iota;</a>
+                <a>服装城</a>
+                <a>京东超市</a>
+                <a>生鲜</a>
+                <a>全球购</a>
+            </div>
+            <div id="nav-items-group3">
+                <a style="float: left; font-size: 12px;font-weight:normal;height: 20px;">&Iota;</a>
+                <a>京东金融</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--主要内容总分-->
+<div class="fs">
+    <div class="grid_c1 fs_inner">
+        <div class="fs_col1">
+            <div class="J_create create">
+                <div class="JS_navCtn create_menu">
+                    <div class="create_menu_item" data-index="1">
+                        <a class="create_menu_link">家用电器</a>
+                    </div>
+                    <div class="create_menu_item" data-index="2">
+                        <a class="create_menu_link">手机</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">运营商</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">数码</a>
+                    </div>
+                    <div class="create_menu_item" data-index="3">
+                        <a class="create_menu_link">电脑</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">办公</a>
+                    </div>
+                    <div class="create_menu_item" data-index="4">
+                        <a class="create_menu_link">家居</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">家具</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">家装</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">厨具</a>
+                    </div>
+                    <div class="create_menu_item" data-index="5">
+                        <a class="create_menu_link">男装</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">女装</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">童装</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">内衣</a>
+                    </div>
+                    <div class="create_menu_item" data-index="6">
+                        <a class="create_menu_link">美妆个护</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">宠物</a>
+                    </div>
+                    <div class="create_menu_item" data-index="7">
+                        <a class="create_menu_link">女鞋</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">箱包</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">钟表</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">珠宝</a>
+                    </div>
+                    <div class="create_menu_item" data-index="8">
+                        <a class="create_menu_link">男鞋</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">运动</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">户外</a>
+                    </div>
+                    <div class="create_menu_item" data-index="9">
+                        <a class="create_menu_link">汽车</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">汽车用品</a>
+                    </div>
+                    <div class="create_menu_item" data-index="10">
+                        <a class="create_menu_link">母婴</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">玩具乐器</a>
+                    </div>
+                    <div class="create_menu_item" data-index="11">
+                        <a class="create_menu_link">食品</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">酒类</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">生鲜</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">特产</a>
+                    </div>
+                    <div class="create_menu_item" data-index="12">
+                        <a class="create_menu_link">医药保健</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">计生情趣</a>
+                    </div>
+                    <div class="create_menu_item" data-index="13">
+                        <a class="create_menu_link">图书</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">音像</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">电子书</a>
+                    </div>
+                    <div class="create_menu_item" data-index="14">
+                        <a class="create_menu_link">机票</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">酒店</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">旅游</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">生活</a>
+                    </div>
+                    <div class="create_menu_item" data-index="15">
+                        <a class="create_menu_link">理财</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">众筹</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">白条</a>
+                        <span class="create_menu_line">/</span>
+                        <a class="create_menu_link">保险</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fs_col2">
+            <div class="J_slider slider">
+                <div class="J_slider_main slider_main">
+                    <img src="images/fs_col2_1.jpg" alt="主循环图片" class="J_slider_item_img slider_item_img" title="Title1">
+                </div>
+            </div>
+            <div class="J_slider_exten slider_extend clearfix">
+                <div class="J_slider_bi slider_bi">
+                    <img class="J_slider_bi_img slider_bi_img" src="images/fs_col2_bottom_left.png" alt="左边图片">
+                </div>
+                <div class="J_slider_bi slider_bi">
+                    <img class="J_slider_bi_img slider_bi_img" src="images/fs_col2_bottom_right" alt="右边图片">
+                </div>
+            </div>
+        </div>
+        <div class="fs_col3">
+            <div class="J_user user">
+                <div class="user_info" >
+                    <div class="J_user_info_avatar user_info_avatar">
+                        <img class="J_user_info_avatar_img" src="images/no_login.jpg" alt="未登录">
+                    </div>
+                    <div class="user_info_show">
+                        <p class="user_info_tip">Hi, 欢迎来到京东!</p>
+                        <p>
+                            <a class="user_info_login">登录</a>
+                            <a class="user_info_reg">注册</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="user_profit">
+                    <a class="user_profit_lk">新人福利</a>
+                    <a class="user_profit_lk">PLUS会员</a>
+                </div>
+
+            </div>
+            <div class="news J_news">
+                <div class="mod_tab news_tab J_news_tab">
+                    <div class="mod_tab_head J_tab_head clearfix">
+                        <div>
+                            <a class="mod_tab_head_item news_first">促销</a>
+                        </div>
+                        <div>
+                            <a class="mod_tab_head_item news_last">公告</a>
+                        </div>
+                        <div>
+                            <a class="mod_tab_head_item news_more">更多</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div  style="padding: 12px 0;">
+                            <ul class="news_list">
+                                <li class="news_item">自营家具建材每满200减50</li>
+                                <li class="news_item">DW腕表焕新 每满500减60</li>
+                                <li class="news_item">【宝贝趴】好货5折，满199减100</li>
+                                <li class="news_item">家电1元秒拍，抢券享满减！</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="J_service" class="service">
+                <div class="service_entry">
+                    <div class="service_list">
+                        <div class="service_item">话费</div>
+                        <div class="service_item">机票</div>
+                        <div class="service_item">酒店</div>
+                        <div class="service_item">游戏</div>
+                        <div class="service_item">企业购</div>
+                        <div class="service_item">加油卡</div>
+                        <div class="service_item">电影票</div>
+                        <div class="service_item">火车票</div>
+                        <div class="service_item">众筹</div>
+                        <div class="service_item">理财</div>
+                        <div class="service_item">礼品卡</div>
+                        <div class="service_item">白条</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+</div>
+
+<div class="J_f J_sk need_ani sk">
+    <div class="grid_c1 box sk_inner">
+        <!--秒杀介绍-->
+        <div class="box_hd_top clearfix">
+            <div class="box_hd_col1">
+                <h3 class="box_tit">京东秒杀</h3>
+                <a class="box_subtit">总有你想不到的低价</a>
+            </div>
+            <div class="box_hd_col2">
+                <div class="J_sk_cd sk_cd">
+                    <span class="sk_cd_tip">当前场次</span>
+                    <div class="sk_cd_main J_sk_cd_main">
+                        <div class="cd clearfix">
+                            <div class="cd_item cd_hour">
+                                <span class="cd_item_txt">01</span>
+                            </div>
+                            <div class="cd_split">
+                                <i class="cd_split_dot cd_split_top"></i>
+                                <i class="cd_split_dot cd_split_bottom"></i>
+                            </div>
+                            <div class="cd_item cd_minute">
+                                <span class="cd_item_text">27</span>
+                            </div>
+                            <div class="cd_split">
+                                <i class="cd_split_dot cd_split_top"></i>
+                                <i class="cd_split_dot cd_split_bottom"></i>
+                            </div>
+                            <div class="cd_item cd_second">
+                                <span class="cd_item_text">37</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sk_cd_tip">后面结束抢购</div>
+                </div>
+            </div>
+        </div>
+        <!--秒杀商品图片-->
+        <div class="box_hd_bottom clearfix">
+            <!--左边图片轮播区-->
+            <div class="ms_left">
+                <div class="ms_left ms_item">
+                    <div class="ms_item_pic">
+                        <div style="margin: 0 auto;">
+                            <img src="images/ms1.jpg" class="ms_item_img" alt="【京东超市】五粮液股份公司出品 100年传奇金装版白酒 52度 整箱装 500ml*6瓶" title="【京东超市】五粮液股份公司出品 100年传奇金装版白酒 52度 整箱装 500ml*6瓶">
+                            <p class="ms_item_name">【京东超市】五粮液股份公司出品 100年传奇金装版白酒 52度 整箱装 500ml*6瓶</p>
+                        </div>
+                        <div class="ms_item_price">
+                            <div class="mod_price_new">
+                                <span>¥</span>
+                            </div>
+                            <div class="ms_item_price_new">
+                                <span>149.00</span>
+                            </div>
+                            <div class="mod_price_old">
+                                <span>¥</span>
+                            </div>
+                            <div class="ms_item_price_old">
+                                <span>399.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ms_left ms_item">
+                    <div class="ms_item_pic">
+                        <div style="margin: 0 auto;">
+                            <img src="images/ms2.jpg" class="ms_item_img" alt="九阳（Joyoung）破壁料理机榨汁机智能加热JYL-Y915" title="九阳（Joyoung）破壁料理机榨汁机智能加热JYL-Y915">
+                            <p class="ms_item_name">九阳（Joyoung）破壁料理机榨汁机智能加热JYL-Y915</p>
+                        </div>
+                        <div class="ms_item_price">
+                            <div class="mod_price_new">
+                                <span>¥</span>
+                            </div>
+                            <div class="ms_item_price_new">
+                                <span>899.00</span>
+                            </div>
+                            <div class="mod_price_old">
+                                <span>¥</span>
+                            </div>
+                            <div class="ms_item_price_old">
+                                <span>1599.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ms_left ms_item">
+                    <div class="ms_item_pic">
+                        <div style="margin: 0 auto;">
+                            <img src="images/ms3.jpg" class="ms_item_img" alt="努比亚(nubia)【6+64GB】Z17mini 香槟金 移动联通电信4G手机 双卡双待" title="努比亚(nubia)【6+64GB】Z17mini 香槟金 移动联通电信4G手机 双卡双待">
+                            <p class="ms_item_name">努比亚(nubia)【6+64GB】Z17mini 香槟金 移动联通电信4G手机 双卡双待</p>
+                        </div>
+                        <div class="ms_item_price">
+                            <div class="mod_price_new">
+                                <span>¥</span>
+                            </div>
+                            <div class="ms_item_price_new">
+                                <span>1998.00</span>
+                            </div>
+                            <div class="mod_price_old">
+                                <span>¥</span>
+                            </div>
+                            <div class="ms_item_price_old">
+                                <span>1999.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ms_left ms_item">
+                    <div class="ms_item_pic">
+                        <div style="margin: 0 auto;">
+                            <img src="images/ms4.jpg" class="ms_item_img" alt="京东超市】清风（APP）抽纸 柔韧2层200抽软抽*20包纸巾（整箱售卖）" title="京东超市】清风（APP）抽纸 柔韧2层200抽软抽*20包纸巾（整箱售卖）">
+                            <p class="ms_item_name">京东超市】清风（APP）抽纸 柔韧2层200抽软抽*20包纸巾（整箱售卖）</p>
+                        </div>
+                        <div class="ms_item_price">
+                            <div class="mod_price_new">
+                                <span>¥</span>
+                            </div>
+                            <div class="ms_item_price_new">
+                                <span>36.90</span>
+                            </div>
+                            <div class="mod_price_old">
+                                <span>¥</span>
+                            </div>
+                            <div class="ms_item_price_old">
+                                <span>49.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ms_left ms_item">
+                    <div class="ms_item_pic">
+                        <div style="margin: 0 auto;">
+                            <img src="images/ms5.jpg" class="ms_item_img" alt="联想（ThinkPad）轻薄系列E470c（20H3A004CD）14英寸笔记本电脑（i5-6200U 8G 500G 2G独显 Win10）黑色" title="联想（ThinkPad）轻薄系列E470c（20H3A004CD）14英寸笔记本电脑（i5-6200U 8G 500G 2G独显 Win10）黑色">
+                            <p class="ms_item_name">联想（ThinkPad）轻薄系列E470c（20H3A004CD）14英寸笔记本电脑（i5-6200U 8G 500G 2G独显 Win10）黑色</p>
+                        </div>
+                        <div class="ms_item_price">
+                            <div class="mod_price_new">
+                                <span>¥</span>
+                            </div>
+                            <div class="ms_item_price_new">
+                                <span>4499.90</span>
+                            </div>
+                            <div class="mod_price_old">
+                                <span>¥</span>
+                            </div>
+                            <div class="ms_item_price_old">
+                                <span>4999.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--右边单张图片固定-->
+            <div class="ms_right">
+                <div class="ms_left item">
+                    <img src="images/ms_r.jpg" title="右侧" alt="右侧">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer" style="background: #440106; height: 100px;">
+    脚部
+</div>
+<script src="js/jd.js"></script>
+</body>
+</html>

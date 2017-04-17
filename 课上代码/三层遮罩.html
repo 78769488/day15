@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+</head>
+<body>
+<div style="position: fixed; background-color: white;
+    top: 50%;left: 50%; height: 400px; width: 400px;
+    z-index: 10;
+    margin-left: -200px;
+    margin-top: -200px;
+    ">遮罩层3
+</div>
+<div style="position: fixed; background-color:black;
+    left: 0;right: 0;top: 0;bottom: 0;
+    /*透明度 默认为1 全遮住*/
+    opacity: 0.5;
+    z-index: 9;
+    text-align: center;
+    ">遮罩层1
+</div>
+<div style="height: 5000px; background-color: green">
+    fafafasfddasfas
+</div>
+</body>
+</html>

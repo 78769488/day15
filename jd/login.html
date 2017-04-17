@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>京东-欢迎登录</title>
+    <link rel="stylesheet" type="text/css" href="style/login.css">
+</head>
+<body style="background: #ffffff;">
+    <!--头部Logo-->
+    <div class="logo_header">
+        <div class="w">
+            <div id="logo">
+                <img src="images/logo-login.png" class="logo_img" alt="京东">
+                <img src="images/l-icon.png" class="logo_icon" alt="欢迎登录">
+            </div>
+            <div class="q-link">
+                <img src="images/q-icon.png" alt="问卷调查">
+                <a>登录页面，调查问卷</a>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+
+    <!--登录区域-->
+    <div id="content">
+        <div class="login_wrap">
+            <div class="w">
+                <div style="background-image: url(images/login-bg.jpg);height: 475px;">
+                    <div class="login_form">
+                        <div  onclick="ChangeLogin('qrcode')" class="login-tab login-tab-l">
+                            <a>扫码登录</a>
+                        </div>
+                        <div onclick="ChangeLogin('account')" class="login-tab login-tab-r">
+                            <a>账号登录</a>
+                        </div>
+                        <!--扫码登录-->
+                        <div class="qrcode-login hide" id="qrcode">
+                            <div class="mc">
+                                <div class="qrcode-main">
+                                    <img src="images/qrcode.png" alt>
+                                </div>
+                                <div class="qrcode-panel">
+                                    <span>打开</span>
+                                    <span style="color: red;">手机京东</span>
+                                    <span>&nbsp;&nbsp;扫描二维码</span>
+                                </div>
+                                <div>
+                                    <span style="width: 70px; height: 26px; display: inline-block; line-height: 26px;">免输入</span>
+                                    <span style="width: 70px; height: 26px; display: inline-block; line-height: 26px">更快</span>
+                                    <span style="width: 70px; height: 26px; display: inline-block; line-height: 26px">更安全</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--账号登录-->
+                        <div id="account" class="login-box" >
+                            <div class="mc">
+                                <div class="form">
+                                    <input id="login_name" type="text" style="width: 270px;height: 30px; margin-top: 80px;padding-left: 30px;" placeholder="邮箱/用户名/已验证手机">
+                                    <span style="position: absolute; left: 5px;top: 90px;background: url(images/i_name.jpg) no-repeat; height: 30px;width: 30px; display: inline-block;"></span>
+
+                                    <input id="login_pwd" type="text" style="width: 270px;height: 30px; margin-top: 20px;padding-left: 30px;" placeholder="密码">
+                                    <span style="position: absolute; left: 5px;top: 140px;background: url(images/i_pwd.jpg) no-repeat; height: 30px;width: 30px; display: inline-block;"></span>
+
+                                    <span style="position: absolute; right: 0; top: 200px;display: inline-block;">忘记密码</span>
+                                    <input onclick="Login()" type="button" value="登&nbsp;&nbsp;&nbsp;&nbsp;录" style="font-family: 'Microsoft YaHei';font-size: 20px;
+                                    position: absolute;top: 250px; width: 300px;height: 30px; left: 0;color: #ffffff;background-color: #e4393c; border: 1px solid #e4393c;" />
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--其他登录方式-->
+                        <div class="login-other">
+                            <div class="login-qq">
+                                <div class="img-qq"></div>
+                                <div style="float: left; margin-left: 5px">QQ</div>
+                                <span style="margin:0 10px 0 10px">|</span>
+                            </div>
+                            <div class="login-wx">
+                                <div class="img-wx"></div>
+                                <div style="float: left; margin-left: 5px">QQ</div>
+                            </div>
+                            <div class="login-register" style="float: right;">
+                                <span style="color: red;">立即注册</span>
+                            </div>
+                            <!--<div class="login-qq" style="background: url(images/QQ-weixin.png) no-repeat;-->
+<!--background-position-y: 15px;">-->
+                                <!--QQ-->
+                                <!--&lt;!&ndash;<img src="images/QQ-weixin.png" alt="qq">&ndash;&gt;-->
+                            <!--</div>-->
+                            <!--<div class="login-qq">-->
+                                <!--<img src="images/QQ-weixin.png" alt="qq">-->
+                            <!--</div>-->
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    <script>
+        function Login() {
+            var username = document.getElementById("login_name").value;
+            console.log(username);
+            var password = document.getElementById("login_pwd").value;
+            console.log(password);
+            if(username == "test" && password=="test"){
+                console.log("登录成功")
+                alert("登录成功")
+            }else{
+                console.log("登录失败")
+                alert("登录失败")
+            }
+        }
+        function ChangeLogin(login_type) {
+            if(login_type == "qrcode"){
+                var other_type = "account";
+            }else {
+                var other_type = "qrcode";
+            }
+
+            var current = document.getElementById(login_type);
+            console.log(current);
+            current.classList.remove("hide");
+            var other = document.getElementById(other_type);
+            console.log(other);
+            other.classList.add("hide")
+
+//            var current_type = document.getElementById(type);
+//            console.log(current_type);
+//            current_type.classList.remove("hide");
+        }
+    </script>
+    <!--<script src="js/login.js"></script>-->
+</body>
+</html>

@@ -1,0 +1,166 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+div {
+    display: block;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background-color: #fff;
+    font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;
+    color: #666;
+}
+image {
+    border:0;
+}
+a {
+    text-decoration: none;
+}
+.w {
+    width: 990px;
+    margin:0 auto;
+}
+#logo {
+    position: relative;
+    width: 300px;
+    margin: 10px 0;
+    height: 60px;
+    float: left;
+}
+.logo_img {
+    float: left;
+    width: 160px;
+    height: 60px;
+}
+.logo_icon {
+    width: 110px;
+    height: 40px;
+    float: right;
+    margin-top: 10px;
+}
+.q-link {
+    position: relative;
+    float: right;
+    top: 52px;
+}
+.q-link img {
+    float: left;
+    width: 18px;
+    height: 14px;
+}
+.q-link a {
+    display: inline-block;
+    margin-left: 5px;
+    float: right;
+    height: 14px;
+    line-height: 14px;
+}
+#content {
+    background-color: #022768;
+    left:0;
+    top:0;
+    height: 475px;
+}
+.login_wrap {
+    position: relative;
+    height: 475px;
+    margin: 10px 0 20px;
+    z-index: 5;
+}
+.login_form {
+    position: relative;
+    background-color: #ffffff;
+    width: 346px;
+    top: 40px;
+    /*height: 300px;*/
+    overflow: visible;
+    float: right;
+    z-index:6;
+}
+.login-tab {
+    height: 54px;
+    font-size: 18px;
+    font-family: "microsoft yahei";
+    text-align: center;
+    border-bottom: 1px solid #f4f4f4;
+    position: absolute;
+    background-color: #ffffff;
+    display: block;
+    line-height: 54px;
+    z-index: 11;
+}
+.login-tab-l, .login-tab-r {
+    width: 173px;
+    z-index: 12;
+}
+.login-tab a:hover {
+    color: red;
+}
+.login-tab-r {
+    right:0;
+}
+
+.qrcode-login {
+    width: 306px;
+    padding: 20px 18px 20px 20px;
+    text-align: center;
+}
+.qrcode-main {
+    position: relative;
+    height: 168px;
+    margin-top: 55px;
+}
+.login-other {
+    height: 50px;
+    /*padding-left: 20px;*/
+    padding-right: 20px;
+    line-height: 50px;
+    border-top: 1px solid #f4f4f4;
+    background-color: #fcfcfc;
+}
+.login-qq {
+    position: relative;
+    padding-left: 24px;
+    /*line-height: 50px;*/
+    float: left;
+}
+.img-qq {
+    float: left;
+    margin-top:15px;
+    width: 20px;
+    height: 20px;
+    /*border: 1px solid red;*/
+    background: url(../images/QQ-weixin.png) no-repeat;
+    /*移动图片位置,显示不同的图片区域*/
+    background-position-x: 0;
+    background-position-y: 0;
+}
+
+.img-wx {
+    float: left;
+    margin-top:15px;
+    width: 20px;
+    height: 20px;
+    /*border: 1px solid red;*/
+    background: url(../images/QQ-weixin.png) no-repeat;
+    /*移动图片位置,显示不同的图片区域*/
+    background-position-x: -20px;
+    background-position-y: 0;
+}
+
+.login-box {
+    width: 306px;
+    height: 300px;
+    padding: 20px 18px 20px 20px;
+    text-align: center;
+}
+.form {
+    position: relative;
+    height: 310px;
+}
+.hide {
+    display: none;
+}

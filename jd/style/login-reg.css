@@ -314,8 +314,11 @@ a {
     padding-left: 110px;
 }
 .form-item-tip{
-    height: 20px;
-    line-height: 20px;
+    /*height: 21px;*/
+    /*line-height: 21px;*/
+}
+.form-item-tip a{
+    color: blue;
 }
 
 .input-tip {

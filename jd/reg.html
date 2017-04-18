@@ -5,21 +5,67 @@
     <meta http-equiv="x-ua-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>个人注册</title>
+    <link rel="stylesheet" type="text/css" href="style/login-reg.css">
 </head>
 <body  style="background: #ffffff;">
     <div class="pg-header">
         <div class="w">
-            <div id="logo">
-                <img src="images/logo-login.png" class="logo_img" alt="京东">
-                <img src="images/l-icon.png" class="logo_icon" alt="欢迎登录">
+            <div id="logo" style="margin-top: 14px; float: left;">
+                <img src="images/logo-login.png" alt="京东">
             </div>
-            <div class="q-link">
-                <img src="images/q-icon.png" alt="问卷调查">
-                <a>登录页面，调查问卷</a>
+            <div class="reg-title">
+                <span style="">欢迎注册</span>
+            </div>
+            <div class="have-account" style="float: right; font-size:16px;margin-top: 55px">
+                <span>已有账号？&nbsp;&nbsp;</span>
+                <a href="login.html">请登录</a>
             </div>
             <div style="clear: both;"></div>
         </div>
     </div>
-
+    <div class="pg-content">
+        <div class="w">
+            <div id="register-form">
+                <div class="form-item form-item-account">
+                    <input type="text" id="reg-account" placeholder="您的账户名和登录名" title="账户名"/>
+                    <label>用&nbsp;&nbsp;&nbsp;户&nbsp;&nbsp;&nbsp;名：</label>
+                </div>
+                <div class="input-tip"><span></span></div>
+                <div class="form-item form-item-pwd1">
+                    <input type="text" id="reg-pwd1" placeholder="建议至少使用两种字符组合" title="建议至少使用两种字符组合"/>
+                    <label>设&nbsp;置&nbsp;密&nbsp;码：</label>
+                </div>
+                <div class="input-tip"><span></span></div>
+                <div class="form-item form-item-pwd2">
+                    <input type="text" id="reg-pwd2" placeholder="请两次输入密码" title="请两次输入密码"/>
+                    <label>确&nbsp;认&nbsp;密&nbsp;码：</label>
+                </div>
+                <div class="input-tip"><span></span></div>
+                <div class="form-item form-item-phone">
+                    <input type="text" id="reg-phone" placeholder="建议常用的手机" title="建议常用的手机"/>
+                    <label>中国 0086：</label>
+                </div>
+                <div class="input-tip"><span></span></div>
+                <div class="form-item form-item-code1">
+                    <input type="text" id="reg-code1" placeholder="请输入验证码" title="请输入验证码"/>
+                    <label>验&nbsp;&nbsp;&nbsp;证&nbsp;&nbsp;&nbsp;码：</label>
+                </div>
+                <div class="input-tip"><span></span></div>
+                <div class="form-item form-item-code2">
+                    <input type="text" id="reg-code2" placeholder="请输入手札验证码" title="请输入手札验证码"/>
+                    <label>手机验证码：</label>
+                </div>
+                <div class="input-tip"><span></span></div>
+                <div class="form-item form-item-tip">
+                    <input type="checkbox" title="checkbox"/>
+                    <label>阅&nbsp;读&nbsp;协&nbsp;议</label>
+                </div>
+                <div class="input-tip"><span></span></div>
+                <div class="form-item form-item-reg">
+                    <input type="submit" value="立即注册"/>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

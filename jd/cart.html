@@ -99,7 +99,7 @@
         </div>
         <div class="cart-title">
             <div class="column t-checkbox">
-                <input type="checkbox"  title="选择商品" style="vertical-align:middle;"/>
+                <input id="choose-all-top" type="checkbox"  title="全选" style="vertical-align:middle;" onclick="ChooseAll('top')"/>
                 <label style="vertical-align:middle;">全选</label>
             </div>
             <div class="column t-goods" style="width: 208px;">商品</div>
@@ -113,7 +113,7 @@
             <input type="checkbox" title="勾选自选商品">
             京东自营
         </div>
-        <div class="item-list">
+        <div id="item-list" class="item-list">
             <div class="item-list item-list-item">
                 <div class="cell">
                     <input type="checkbox" title="勾选商品" class="cell item-checkbox">
@@ -131,9 +131,9 @@
                     ¥24.90
                 </div>
                 <div class="cell item-num" style="width: 80px;text-align: center;">
-                    <div style="border: 1px solid #dddddd; width: 80px;height: 22px; line-height: 22px;">
-                        <div style="float: left;width: 20px;height: 22px; border-right: 1px solid #dddddd;">-</div>
-                        <div style="float: left;width: 38px;height: 22px; border-right: 1px solid #dddddd;">1</div>
+                    <div style="border: 1px solid #dddddd; width: 80px;height: 22px; line-height: 22px;font-size: 12px;">
+                        <div style="float: left;width: 20px;height: 22px;">-</div>
+                        <div style="float: left;width: 38px;height: 22px;border-right: 1px solid #dddddd;border-left: 1px solid #dddddd;">1</div>
                         <div style="float: left;width: 20px;height: 22px;">+</div>
                     </div>
                 </div>
@@ -246,6 +246,10 @@
                 </div>
             </div>
 
+        </div>
+        <div class="column t-checkbox">
+            <input id="choose-all-bottom" type="checkbox"  title="全选" style="vertical-align:middle;" onclick="ChooseAll('bottom')"/>
+            <label style="vertical-align:middle;">全选</label>
         </div>
     </div>
 </div>
@@ -278,5 +282,27 @@
         </div>
     </div>
 </div>-->
+<script>
+    function ChooseAll(top_bottom) {
+        var status_top = document.getElementById("choose-all-top").checked;
+        var new_status;
+        if (top_bottom === 'top'){
+            new_status = status_top;
+            document.getElementById("choose-all-bottom").checked = new_status;
+        }else {
+            new_status = !status_top;
+            document.getElementById("choose-all-top").checked = new_status;
+        }
+        var item_list = document.getElementById("item-list").children;
+        console.log(item_list);
+        for (var i=0;i<item_list.length;i++){
+            var current_item =item_list[i];
+            console.log(current_item);
+            var checkbox = current_item.children[0].children[0];
+            console.log(checkbox);
+            checkbox.checked = new_status;
+        }
+    }
+</script>
 </body>
 </html>

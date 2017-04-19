@@ -29,7 +29,6 @@ a {
 
 #logo {
     position: relative;
-    /*width: 300px;*/
     margin: 10px 0;
     height: 60px;
     float: left;
@@ -259,7 +258,12 @@ a {
 .hide {
     display: none;
 }
-
+.footer-content a{
+    margin: 10px;
+}
+.footer-content a:hover {
+    color: #e22222;
+}
 .pg-header {
     height: 110px;
     background: url(../images/headbg.jpg) repeat-x left bottom;
@@ -282,7 +286,6 @@ a {
     margin: 50px auto 60px;
     position: relative;
     width: 600px;
-    height: 800px;
 }
 
 .form-item {
@@ -312,6 +315,7 @@ a {
     line-height: 52px;
     font-size: 14px;
     padding-left: 110px;
+    color: #e01222;
 }
 .form-item-tip{
     /*height: 21px;*/
@@ -326,4 +330,93 @@ a {
     height: 27px;
     font-size: 12px;
     padding-top: 5px;
+}
+.getCode{
+    width: 110px;
+    height: 46px;
+    position: absolute;
+    right: 0; 
+    top: 4px;
+}
+.getCode:hover {
+    cursor: pointer;
+}
+.getPhoneCode {
+    width: 110px;
+    height: 46px;
+    position: absolute;
+    right: 0; 
+    top: 4px;
+    background-color: #f2f2f2;
+    border: none;
+}
+.getPhoneCode:hover {
+    cursor: pointer;
+}
+.btnReg {
+    width:100%;
+    height: 54px;
+    color: #ffffff;
+    background-color: #e22222;
+    border:0;
+    font-size: 18px;
+    font-family: "Microsoft YaHei", serif;
+}
+
+.nav-right a{
+    margin:0 10px;
+}
+.item-all, .item-dyf {
+    float:left;
+    width: 100px;
+    font: 18px bold;
+    font-family: "Microsoft YaHei", serif;
+}
+.item-all span:hover, .item-dyf span:hover {
+    color:red;
+    border-bottom: 2px solid #f10215;
+}
+.cart-title {
+    background: #f3f3f3;
+    border: 1px solid #e9e9e9;
+    height: 32px;
+    line-height: 32px;
+    margin:0 0 10px;
+    padding: 5px 0;
+
+}
+.column {
+    float: left;
+}
+.t-checkbox {
+    width: 122px;
+    height: 18px;
+    line-height: 18px;
+    padding-top: 7px;
+    padding-left: 11px;
+}
+.item-list {
+    margin-top: 5px;
+    border: 1px solid #f1f1f1;
+    border-top: 2px solid #aaaaaa;
+    width: 990px;
+}
+.item-list-item {
+    float: left;
+    height: 120px;
+    border-top:none;
+    border-bottom: 1px solid #aaaaaa;
+    /*padding:0 10px 1px 40px;*/
+}
+.cell {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    float: left;
+    position: relative;
+}
+.cell .item-checkbox {
+    /*position: absolute;*/
+    left: 0;
+    width: 30px;
+    background:red;
 }

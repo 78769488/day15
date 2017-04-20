@@ -82,7 +82,7 @@
 
 <!--内容-->
 <div id="pg-content">
-    <div class="w" style="height: 400px;">
+    <div class="w">
         <div class="switch-cart" style="margin-top: 10px;height: 26px;line-height: 26px;">
             <div class="switch-cart item-all">
                 <span>全部商品</span>
@@ -97,6 +97,7 @@
                 </div>
             </div>
         </div>
+        <!--标题栏-->
         <div class="cart-title">
             <div class="column t-checkbox">
                 <input id="choose-all-top" type="checkbox"  title="全选" style="vertical-align:middle;" onclick="ChooseAll('top')"/>
@@ -113,8 +114,9 @@
             <input type="checkbox" title="勾选自选商品">
             京东自营
         </div>
+        <!--商品清单-->
         <div id="item-list" class="item-list">
-            <div class="item-list item-list-item">
+            <div class="item-list item-list-item" id="item-1">
                 <div class="cell">
                     <input type="checkbox" title="勾选商品" class="cell item-checkbox">
                 </div>
@@ -147,21 +149,21 @@
                 </div>
             </div>
 
-            <div class="item-list item-list-item">
+            <div class="item-list item-list-item" id="item-2">
                 <div class="cell">
                     <input type="checkbox" title="勾选商品" class="cell item-checkbox">
                 </div>
                 <div class="cell item-img">
-                    <img src="images/item1.jpg" alt="商品图片" style="border: 1px solid #f1f1f1;">
+                    <img src="images/item2.jpg" alt="商品图片" style="border: 1px solid #f1f1f1;">
                 </div>
                 <div class="cell item-name" style="width: 208px;height: 40px;line-height: 20px;padding: 15px 10px 0;">
-                    360随身WiFi3 300M 无线网卡 迷你路由器 黑色
+                    【京东超市】辉山（huishan）甄致纯牛奶250ml*12礼盒装
                 </div>
                 <div class="cell item-prop" style="width: 140px;padding: 15px 20px 0;">
-                    颜色：黑色
+                    颜色：甄致纯牛奶250ml*12
                 </div>
                 <div class="cell item-price" style="width: 120px;text-align: right;padding-right: 40px;">
-                    ¥24.90
+                    ¥29.00
                 </div>
                 <div class="cell item-num" style="width: 80px;text-align: center;">
                     <div style="border: 1px solid #dddddd; width: 80px;height: 22px; line-height: 22px;">
@@ -180,21 +182,21 @@
                 </div>
             </div>
 
-            <div class="item-list item-list-item">
+            <div class="item-list item-list-item" id="item-3">
                 <div class="cell">
                     <input type="checkbox" title="勾选商品" class="cell item-checkbox">
                 </div>
                 <div class="cell item-img">
-                    <img src="images/item1.jpg" alt="商品图片" style="border: 1px solid #f1f1f1;">
+                    <img src="images/item3.jpg" alt="商品图片" style="border: 1px solid #f1f1f1;">
                 </div>
                 <div class="cell item-name" style="width: 208px;height: 40px;line-height: 20px;padding: 15px 10px 0;">
-                    360随身WiFi3 300M 无线网卡 迷你路由器 黑色
+                    【京东超市】福临门 东北大米 水晶米 中粮出品 大米5kg
                 </div>
                 <div class="cell item-prop" style="width: 140px;padding: 15px 20px 0;">
-                    颜色：黑色
+                    颜色：水晶米5kg
                 </div>
                 <div class="cell item-price" style="width: 120px;text-align: right;padding-right: 40px;">
-                    ¥24.90
+                    ¥29.90
                 </div>
                 <div class="cell item-num" style="width: 80px;text-align: center;">
                     <div style="border: 1px solid #dddddd; width: 80px;height: 22px; line-height: 22px;">
@@ -212,44 +214,19 @@
                     <div>动我的关注</div>
                 </div>
             </div>
-
-            <div class="item-list item-list-item">
-                <div class="cell">
-                    <input type="checkbox" title="勾选商品" class="cell item-checkbox">
-                </div>
-                <div class="cell item-img">
-                    <img src="images/item1.jpg" alt="商品图片" style="border: 1px solid #f1f1f1;">
-                </div>
-                <div class="cell item-name" style="width: 208px;height: 40px;line-height: 20px;padding: 15px 10px 0;">
-                    360随身WiFi3 300M 无线网卡 迷你路由器 黑色
-                </div>
-                <div class="cell item-prop" style="width: 140px;padding: 15px 20px 0;">
-                    颜色：黑色
-                </div>
-                <div class="cell item-price" style="width: 120px;text-align: right;padding-right: 40px;">
-                    ¥24.90
-                </div>
-                <div class="cell item-num" style="width: 80px;text-align: center;">
-                    <div style="border: 1px solid #dddddd; width: 80px;height: 22px; line-height: 22px;">
-                        <div style="float: left;width: 20px;height: 22px; border-right: 1px solid #dddddd;">-</div>
-                        <div style="float: left;width: 38px;height: 22px; border-right: 1px solid #dddddd;">1</div>
-                        <div style="float: left;width: 20px;height: 22px;">+</div>
-                    </div>
-                </div>
-                <div class="cell item-sum" style="width: 100px;text-align: right;padding-right: 40px">
-                    ¥24.90
-                </div>
-                <div class="cell item-action">
-                    <div>删除</div>
-                    <div>移动我的关注</div>
-                    <div>动我的关注</div>
-                </div>
-            </div>
-
         </div>
-        <div class="column t-checkbox">
-            <input id="choose-all-bottom" type="checkbox"  title="全选" style="vertical-align:middle;" onclick="ChooseAll('bottom')"/>
-            <label style="vertical-align:middle;">全选</label>
+        <!--底部控制-->
+        <div class="cart-bottom">
+            <div class="column t-checkbox">
+                <input id="choose-all-bottom" type="checkbox"  title="全选" style="vertical-align:middle;" onclick="ChooseAll('bottom')"/>
+                <label style="vertical-align:middle;">全选</label>
+            </div>
+            <!--<div class="column t-goods" style="width: 208px;">商品</div>-->
+            <!--<div class="column t-props" style="width: 140px;padding: 0 20px;">&nbsp;</div>-->
+            <!--<div class="column t-price" style="width: 120px;text-align: right;padding-right: 40px;">单价</div>-->
+            <!--<div class="column t-num" style="width: 80px;text-align: center;">数量</div>-->
+            <!--<div class="column t-sum" style="width: 100px;text-align: right;padding-right: 40px">小计</div>-->
+            <!--<div class="column t-action" style="width: 75px;">操作</div>-->
         </div>
     </div>
 </div>
@@ -283,6 +260,7 @@
     </div>
 </div>-->
 <script>
+    <!--点上方或下方全选-->
     function ChooseAll(top_bottom) {
         var status_top = document.getElementById("choose-all-top").checked;
         var new_status;

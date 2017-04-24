@@ -119,7 +119,7 @@
         <div id="item-list" class="item-list">
             <div class="item-list item-list-item" id="item-1">
                 <div class="cell">
-                    <input type="checkbox" title="勾选商品" class="cell item-checkbox" id="checkbox_1" onclick="CheckItem('checkbox_1')" />
+                    <input type="checkbox" title="勾选商品" class="cell item-checkbox" id="checkbox_1" onclick="SetGoodsInfo('checkbox_1')" />
                 </div>
                 <div class="cell item-img">
                     <img src="images/item1.jpg" alt="商品图片" style="border: 1px solid #f1f1f1;">
@@ -152,7 +152,7 @@
 
             <div class="item-list item-list-item" id="item-2">
                 <div class="cell">
-                    <input type="checkbox" title="勾选商品" class="cell item-checkbox" id="checkbox_2" onclick="CheckItem('checkbox_2')">
+                    <input type="checkbox" title="勾选商品" class="cell item-checkbox" id="checkbox_2" onclick="SetGoodsInfo('checkbox_2')">
                 </div>
                 <div class="cell item-img">
                     <img src="images/item2.jpg" alt="商品图片" style="border: 1px solid #f1f1f1;">
@@ -185,7 +185,7 @@
 
             <div class="item-list item-list-item" id="item-3">
                 <div class="cell">
-                    <input type="checkbox" title="勾选商品" class="cell item-checkbox" id="checkbox_3"  onclick="CheckItem('checkbox_3')">
+                    <input type="checkbox" title="勾选商品" class="cell item-checkbox" id="checkbox_3"  onclick="SetGoodsInfo('checkbox_3')">
                 </div>
                 <div class="cell item-img">
                     <img src="images/item3.jpg" alt="商品图片" style="border: 1px solid #f1f1f1;">
@@ -291,18 +291,7 @@
         SetGoodsInfo("ChooseAll");
     }
 
-    // 处理单个商品选中或取消
-    function CheckItem(checkbox_id) {
-        console.log("item_id", checkbox_id);
-        console.log("document.getElementById(checkbox_id).checked", document.getElementById(checkbox_id).checked);
-
-        if(document.getElementById(checkbox_id).checked){
-            console.log("status", 11111);
-            document.getElementById(checkbox_id).checked = false;
-        }
-        SetGoodsInfo("CheckItem")
-    }
-    function Decrement(item_id) {
+      function Decrement(item_id) {
         console.log(item_id);
         // 获取该商品及总商品数量
         var item_num = document.getElementById(item_id).innerText;

@@ -60,11 +60,11 @@
                         <div id="account" class="login-box" >
                             <div class="form">
                                 <div class="username">
-                                    <input id="login_name" type="text" placeholder="邮箱/用户名/已验证手机">
+                                    <input id="login_name" type="text" placeholder="邮箱/用户名/已验证手机" value="test">
                                     <span class="user-icon"></span>
                                 </div>
                                 <div class="password">
-                                    <input id="login_pwd" type="password" placeholder="密码">
+                                    <input id="login_pwd" type="password" placeholder="密码"  value="test">
                                     <span class="pwd-icon"></span>
                                 </div>
                                 <div class="forget-pwd">
@@ -138,6 +138,7 @@
             if(username === "test" && password==="test"){
                 console.log("登录成功");
                 alert("登录成功");
+                window.location.href="cart.html";
             }else{
                 console.log("登录失败");
                 alert("登录失败");

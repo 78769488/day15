@@ -111,10 +111,10 @@
             <div class="column t-sum" style="width: 100px;text-align: right;padding-right: 40px">小计</div>
             <div class="column t-action" style="width: 75px;">操作</div>
         </div>
-        <div style="height: 25px;margin-top: 5px; background-color: bisque; padding-top: 10px;">
-            <input type="checkbox" title="勾选自选商品">
-            京东自营
-        </div>
+        <!--<div style="height: 25px;margin-top: 5px; background-color: bisque; padding-top: 10px;">-->
+            <!--<input type="checkbox" title="勾选自选商品">-->
+            <!--京东自营-->
+        <!--</div>-->
         <!--商品清单-->
         <div id="item-list" class="item-list">
             <div class="item-list item-list-item" id="item-1">
@@ -238,10 +238,10 @@
         </div>
     </div>
 </div>
-<!--底部
+<!--底部-->
 <div id="footer">
     <div class="w">
-        <div class="footer-content"  style="padding-top:20px;text-align: center; border-top: 1px solid #dddddd;">
+        <div class="footer-content"  style="padding-top:50px;text-align: center; border-top: 1px solid #dddddd;">
             <a>关于我们</a>
             |
             <a>联系我们</a>
@@ -266,7 +266,7 @@
             Copyright&nbsp;©&nbsp;2004-2017&nbsp;&nbsp;京东JD.com&nbsp;版权所有
         </div>
     </div>
-</div>-->
+</div>
 <script>
     <!--点上方或下方全选-->
     function ChooseAll(top_bottom) {
@@ -300,13 +300,6 @@
             // 设置商品数量
             itemNum -= 1;
             document.getElementById(item_id).innerText = String(itemNum);
-            // 获取商品总数量
-//            var goods_num = document.getElementById("goodsNum").innerText;
-            // 设置总商品数量
-//            var goodsNum = parseInt(goods_num);
-            // 设置总商品数量
-//            goodsNum -= 1;
-//            document.getElementById("goodsNum").innerText = String(goodsNum);
             // 获取商品单价
             var currentItem_id = item_id.substr(item_id.indexOf("_"));
             var id_itemPrice = "itemPrice" + currentItem_id;
@@ -322,12 +315,6 @@
             console.log("f_sumPrice", f_sumPrice);
             var s_sumPrice = changeTwoDecimal_f(String(f_sumPrice));
             document.getElementById(sumPrice_id).innerText = "¥" + s_sumPrice;
-            // 获取、设置全部商品总金额
-//            var s_goodsPrice = document.getElementById("goodsPrice").innerText;
-//            var f_goodsPrice = parseFloat(s_goodsPrice.substr(1));
-//            f_goodsPrice -= float_price;
-//            s_goodsPrice = changeTwoDecimal_f(String(f_goodsPrice));
-//            document.getElementById("goodsPrice").innerText = "¥" + s_goodsPrice;
             SetGoodsInfo("Decrement");
         }
     }
@@ -339,12 +326,6 @@
         // 设置商品数量
         itemNum += 1;
         document.getElementById(item_id).innerText = String(itemNum);
-        // 获取商品总数量
-//        var goods_num = document.getElementById("goodsNum").innerText;
-        // 设置总商品数量
-//        var goodsNum = parseInt(goods_num);
-//        goodsNum += 1;
-//        document.getElementById("goodsNum").innerText = String(goodsNum);
         // 获取商品单价
         var currentItem_id = item_id.substr(item_id.indexOf("_"));
         var id_itemPrice = "itemPrice" + currentItem_id;
@@ -357,14 +338,6 @@
         f_sumPrice += float_price;
         var s_sumPrice = changeTwoDecimal_f(String(f_sumPrice));
         document.getElementById(sumPrice_id).innerText = "¥" + s_sumPrice;
-        // 获取、设置全部商品总金额
-//        var s_goodsPrice = document.getElementById("goodsPrice").innerText;
-//        console.log("获取、商品总金额", s_goodsPrice, float_price);
-//        var f_goodsPrice = parseFloat(s_goodsPrice.substr(1));
-//        f_goodsPrice += float_price;
-//        s_goodsPrice = changeTwoDecimal_f(String(f_goodsPrice));
-//        console.log("设置全部商品总金额", s_goodsPrice);
-//        document.getElementById("goodsPrice").innerText = "¥" + s_goodsPrice;
         SetGoodsInfo("Increment")
     }
     
@@ -379,7 +352,7 @@
         document.getElementById("goodsPrice").innerText = "¥" + "0.00";
         // 获取所有商品并循环
         var item_list = document.getElementById("item-list").children;
-//        console.log(item_list, item_list.length);
+        // console.log(item_list, item_list.length);
         for (var i=0;i<item_list.length-1;i++){
             var current_item =item_list[i];
             // 获取该商品的勾选状态
@@ -389,12 +362,16 @@
                 // 获取该商品的数量及金额
                 var item_num = current_item.children[5].children[0].children[1].innerText;
                 goods_num += parseInt(item_num);
-//                console.log("该商品的数量", itemNum);
+                //  console.log("该商品的数量", itemNum);
                 document.getElementById("goodsNum").innerText = String(goods_num);
                 var s_price = current_item.children[6].innerText;
                 f_goodsPrice += parseFloat(s_price.substr(1));
                 var s_goodsPrice = changeTwoDecimal_f(String(f_goodsPrice));
                 document.getElementById("goodsPrice").innerText = "¥" + s_goodsPrice;
+            }else {
+                // 有一个商品没有选中, 则设置全部勾选未false
+                document.getElementById("choose-all-top").checked = false;
+                document.getElementById("choose-all-bottom").checked = false;
             }
         }
 

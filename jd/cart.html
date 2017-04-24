@@ -11,14 +11,15 @@
     <meta name="keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,京东">
     <link rel="stylesheet" type="text/css" href="style/other.css">
 </head>
-<body>
+<body onload="SetGoodsInfo('body_onLoad')">
 
 <!--导航栏-->
 <div id="navigation">
     <div class="w">
         <div class="nav-left" style="float: left;height: 30px;line-height: 30px; font-size: 12px;">
             <div class="dorpdown" id="city">
-                <div onmousemove="ShowCitys()" class="my-city" >武汉站</div>
+                <!--<div onmousemove="ShowCitys()" class="my-city" >武汉站</div>-->
+                <div class="my-city" >武汉站</div>
                 <div class="city-box dorpdown-box">
                     <div class="city-list hide">
                         <div class="city-name">北京</div>
@@ -97,13 +98,13 @@
                 </div>
             </div>
         </div>
-        <!--标题栏-->
+        <!--商品标题栏-->
         <div class="cart-title">
             <div class="column t-checkbox">
                 <input id="choose-all-top" type="checkbox"  title="全选" style="vertical-align:middle;" onclick="ChooseAll('top')"/>
                 <label style="vertical-align:middle;">全选</label>
             </div>
-            <div class="column t-goods" style="width: 208px;">商品</div>
+            <div class="column t-goods" style="width: 206px;">商品</div>
             <div class="column t-props" style="width: 140px;padding: 0 20px;">&nbsp;</div>
             <div class="column t-price" style="width: 120px;text-align: right;padding-right: 40px;">单价</div>
             <div class="column t-num" style="width: 80px;text-align: center;">数量</div>
@@ -118,7 +119,7 @@
         <div id="item-list" class="item-list">
             <div class="item-list item-list-item" id="item-1">
                 <div class="cell">
-                    <input type="checkbox" title="勾选商品" class="cell item-checkbox">
+                    <input type="checkbox" title="勾选商品" class="cell item-checkbox" id="checkbox_1" onclick="CheckItem('checkbox_1')" />
                 </div>
                 <div class="cell item-img">
                     <img src="images/item1.jpg" alt="商品图片" style="border: 1px solid #f1f1f1;">
@@ -129,29 +130,29 @@
                 <div class="cell item-prop" style="width: 140px;padding: 15px 20px 0;">
                     颜色：黑色
                 </div>
-                <div class="cell item-price" style="width: 120px;text-align: right;padding-right: 40px;">
-                    ¥24.90
+                <div class="cell item-price" style="width: 120px;text-align: right;padding-right: 40px;" id="itemPrice_1">
+                    ¥9.99
                 </div>
                 <div class="cell item-num" style="width: 80px;text-align: center;">
                     <div style="border: 1px solid #dddddd; width: 80px;height: 22px; line-height: 22px;font-size: 12px;">
-                        <div style="float: left;width: 20px;height: 22px;">-</div>
-                        <div style="float: left;width: 38px;height: 22px;border-right: 1px solid #dddddd;border-left: 1px solid #dddddd;">1</div>
-                        <div style="float: left;width: 20px;height: 22px;">+</div>
+                        <div style="float: left;width: 20px;height: 22px;" id="decrement_1" onclick="Decrement('itemNum_1')">-</div>
+                        <div style="float: left;width: 38px;height: 22px;border-right: 1px solid #dddddd;border-left: 1px solid #dddddd;" id="itemNum_1">1</div>
+                        <div style="float: left;width: 20px;height: 22px;" id="increment_1" onclick="Increment('itemNum_1')">+</div>
                     </div>
                 </div>
-                <div class="cell item-sum" style="width: 100px;text-align: right;padding-right: 40px">
-                    ¥24.90
+                <div class="cell item-sum" style="width: 100px;text-align: right;padding-right: 40px" id="sumPrice_1">
+                    ¥9.99
                 </div>
                 <div class="cell item-action">
                     <div>删除</div>
-                    <div>移动我的关注</div>
-                    <div>动我的关注</div>
+                    <div>移到我的关注</div>
+                    <div>加到我的关注</div>
                 </div>
             </div>
 
             <div class="item-list item-list-item" id="item-2">
                 <div class="cell">
-                    <input type="checkbox" title="勾选商品" class="cell item-checkbox">
+                    <input type="checkbox" title="勾选商品" class="cell item-checkbox" id="checkbox_2" onclick="CheckItem('checkbox_2')">
                 </div>
                 <div class="cell item-img">
                     <img src="images/item2.jpg" alt="商品图片" style="border: 1px solid #f1f1f1;">
@@ -162,29 +163,29 @@
                 <div class="cell item-prop" style="width: 140px;padding: 15px 20px 0;">
                     颜色：甄致纯牛奶250ml*12
                 </div>
-                <div class="cell item-price" style="width: 120px;text-align: right;padding-right: 40px;">
+                <div class="cell item-price" style="width: 120px;text-align: right;padding-right: 40px;" id="itemPrice_2">
                     ¥29.00
                 </div>
                 <div class="cell item-num" style="width: 80px;text-align: center;">
                     <div style="border: 1px solid #dddddd; width: 80px;height: 22px; line-height: 22px;">
-                        <div style="float: left;width: 20px;height: 22px; border-right: 1px solid #dddddd;">-</div>
-                        <div style="float: left;width: 38px;height: 22px; border-right: 1px solid #dddddd;">1</div>
-                        <div style="float: left;width: 20px;height: 22px;">+</div>
+                        <div style="float: left;width: 20px;height: 22px; border-right: 1px solid #dddddd;" id="decrement_2" onclick="Decrement('itemNum_2')">-</div>
+                        <div style="float: left;width: 38px;height: 22px; border-right: 1px solid #dddddd;" id="itemNum_2">1</div>
+                        <div style="float: left;width: 20px;height: 22px;" id="increment_2" onclick="Increment('itemNum_2')">+</div>
                     </div>
                 </div>
-                <div class="cell item-sum" style="width: 100px;text-align: right;padding-right: 40px">
-                    ¥24.90
+                <div class="cell item-sum" style="width: 100px;text-align: right;padding-right: 40px"  id="sumPrice_2">
+                    ¥29.00
                 </div>
                 <div class="cell item-action">
                     <div>删除</div>
-                    <div>移动我的关注</div>
-                    <div>动我的关注</div>
+                    <div>移到我的关注</div>
+                    <div>加到我的关注</div>
                 </div>
             </div>
 
             <div class="item-list item-list-item" id="item-3">
                 <div class="cell">
-                    <input type="checkbox" title="勾选商品" class="cell item-checkbox">
+                    <input type="checkbox" title="勾选商品" class="cell item-checkbox" id="checkbox_3"  onclick="CheckItem('checkbox_3')">
                 </div>
                 <div class="cell item-img">
                     <img src="images/item3.jpg" alt="商品图片" style="border: 1px solid #f1f1f1;">
@@ -195,38 +196,45 @@
                 <div class="cell item-prop" style="width: 140px;padding: 15px 20px 0;">
                     颜色：水晶米5kg
                 </div>
-                <div class="cell item-price" style="width: 120px;text-align: right;padding-right: 40px;">
+                <div class="cell item-price" style="width: 120px;text-align: right;padding-right: 40px;" id="itemPrice_3">
                     ¥29.90
                 </div>
                 <div class="cell item-num" style="width: 80px;text-align: center;">
                     <div style="border: 1px solid #dddddd; width: 80px;height: 22px; line-height: 22px;">
-                        <div style="float: left;width: 20px;height: 22px; border-right: 1px solid #dddddd;">-</div>
-                        <div style="float: left;width: 38px;height: 22px; border-right: 1px solid #dddddd;">1</div>
-                        <div style="float: left;width: 20px;height: 22px;">+</div>
+                        <div style="float: left;width: 20px;height: 22px; border-right: 1px solid #dddddd;" id="decrement_3" onclick="Decrement('itemNum_3')">-</div>
+                        <div style="float: left;width: 38px;height: 22px; border-right: 1px solid #dddddd;" id="itemNum_3">1</div>
+                        <div style="float: left;width: 20px;height: 22px;" id="increment_3" onclick="Increment('itemNum_3')">+</div>
                     </div>
                 </div>
-                <div class="cell item-sum" style="width: 100px;text-align: right;padding-right: 40px">
-                    ¥24.90
+                <div class="cell item-sum" style="width: 100px;text-align: right;padding-right: 40px"  id="sumPrice_3">
+                    ¥29.90
                 </div>
                 <div class="cell item-action">
                     <div>删除</div>
-                    <div>移动我的关注</div>
-                    <div>动我的关注</div>
+                    <div>移到我的关注</div>
+                    <div>加到我的关注</div>
                 </div>
             </div>
+            <div style="clear:both;"></div>
         </div>
-        <!--底部控制-->
-        <div class="cart-bottom">
-            <div class="column t-checkbox">
-                <input id="choose-all-bottom" type="checkbox"  title="全选" style="vertical-align:middle;" onclick="ChooseAll('bottom')"/>
+        <!--商品底部栏-->
+        <div class="cart-bottom" style="width: 990px;height: 52px;border: 1px solid #f1f1f1;margin-top: 10px;line-height: 52px;">
+            <div style="float: left;">
+                <input id="choose-all-bottom" type="checkbox"  title="全选" style="vertical-align:middle;margin-left: 5px;" onclick="ChooseAll('bottom')"/>
                 <label style="vertical-align:middle;">全选</label>
             </div>
-            <!--<div class="column t-goods" style="width: 208px;">商品</div>-->
-            <!--<div class="column t-props" style="width: 140px;padding: 0 20px;">&nbsp;</div>-->
-            <!--<div class="column t-price" style="width: 120px;text-align: right;padding-right: 40px;">单价</div>-->
-            <!--<div class="column t-num" style="width: 80px;text-align: center;">数量</div>-->
-            <!--<div class="column t-sum" style="width: 100px;text-align: right;padding-right: 40px">小计</div>-->
-            <!--<div class="column t-action" style="width: 75px;">操作</div>-->
+            <div style="float: left;margin-left: 10px;">删除选中的商品</div>
+            <div style="float: left;margin-left: 10px;">移到我的关注</div>
+            <div style="float: left;margin-left: 10px;">清除下柜商品</div>
+            <div style="float: right;width: 400px;">
+                <div style="float: left;">已选择</div>
+                <div style="float: left;color: red;margin: 0 5px;" id="goodsNum">3</div>
+                <div style="float: left;">件商品</div>
+                <div style="float: left;margin-left: 10px">总价：</div>
+                <div style="float: left;font-size: 18px;color: red;font-weight: bold;" id="goodsPrice">¥68.89</div>
+                <div  style="float: right;width: 100px;background-color: red;color: white;font-size: 18px;font-weight: bold;text-align: center">去结算</div>
+            </div>
+            <div style="clear: both;"></div>
         </div>
     </div>
 </div>
@@ -272,14 +280,155 @@
             document.getElementById("choose-all-top").checked = new_status;
         }
         var item_list = document.getElementById("item-list").children;
-        console.log(item_list);
-        for (var i=0;i<item_list.length;i++){
+//        console.log(item_list, item_list.length);
+        for (var i=0;i<item_list.length-1;i++){
             var current_item =item_list[i];
-            console.log(current_item);
+//            console.log("current_item", current_item);
             var checkbox = current_item.children[0].children[0];
-            console.log(checkbox);
+//            console.log("checkbox", checkbox, checkbox.checked);
             checkbox.checked = new_status;
         }
+        SetGoodsInfo("ChooseAll");
+    }
+
+    // 处理单个商品选中或取消
+    function CheckItem(checkbox_id) {
+        console.log("item_id", checkbox_id);
+        console.log("document.getElementById(checkbox_id).checked", document.getElementById(checkbox_id).checked);
+
+        if(document.getElementById(checkbox_id).checked){
+            console.log("status", 11111);
+            document.getElementById(checkbox_id).checked = false;
+        }
+        SetGoodsInfo("CheckItem")
+    }
+    function Decrement(item_id) {
+        console.log(item_id);
+        // 获取该商品及总商品数量
+        var item_num = document.getElementById(item_id).innerText;
+        var itemNum = parseInt(item_num);
+        if (itemNum > 1) {
+            // 设置商品数量
+            itemNum -= 1;
+            document.getElementById(item_id).innerText = String(itemNum);
+            // 获取商品总数量
+//            var goods_num = document.getElementById("goodsNum").innerText;
+            // 设置总商品数量
+//            var goodsNum = parseInt(goods_num);
+            // 设置总商品数量
+//            goodsNum -= 1;
+//            document.getElementById("goodsNum").innerText = String(goodsNum);
+            // 获取商品单价
+            var currentItem_id = item_id.substr(item_id.indexOf("_"));
+            var id_itemPrice = "itemPrice" + currentItem_id;
+            var str_price = document.getElementById(id_itemPrice).innerText;
+            var float_price = parseFloat(str_price.substr(1));
+            // 获取、设置该商品总金额
+            var sumPrice_id = "sumPrice" + currentItem_id;
+            var sumPrice = document.getElementById(sumPrice_id).innerText;
+            var f_sumPrice = parseFloat(sumPrice.substr(1));
+            console.log("sumPrice_id", sumPrice_id);
+            console.log(f_sumPrice);
+            f_sumPrice -= float_price;
+            console.log("f_sumPrice", f_sumPrice);
+            var s_sumPrice = changeTwoDecimal_f(String(f_sumPrice));
+            document.getElementById(sumPrice_id).innerText = "¥" + s_sumPrice;
+            // 获取、设置全部商品总金额
+//            var s_goodsPrice = document.getElementById("goodsPrice").innerText;
+//            var f_goodsPrice = parseFloat(s_goodsPrice.substr(1));
+//            f_goodsPrice -= float_price;
+//            s_goodsPrice = changeTwoDecimal_f(String(f_goodsPrice));
+//            document.getElementById("goodsPrice").innerText = "¥" + s_goodsPrice;
+            SetGoodsInfo("Decrement");
+        }
+    }
+    function Increment(item_id){
+        console.log(item_id);
+        // 获取该商品数量
+        var item_num = document.getElementById(item_id).innerText;
+        var itemNum = parseInt(item_num);
+        // 设置商品数量
+        itemNum += 1;
+        document.getElementById(item_id).innerText = String(itemNum);
+        // 获取商品总数量
+//        var goods_num = document.getElementById("goodsNum").innerText;
+        // 设置总商品数量
+//        var goodsNum = parseInt(goods_num);
+//        goodsNum += 1;
+//        document.getElementById("goodsNum").innerText = String(goodsNum);
+        // 获取商品单价
+        var currentItem_id = item_id.substr(item_id.indexOf("_"));
+        var id_itemPrice = "itemPrice" + currentItem_id;
+        var str_price = document.getElementById(id_itemPrice).innerText;
+        var float_price = parseFloat(str_price.substr(1));
+        // 获取、设置该商品总金额
+        var sumPrice_id = "sumPrice" + currentItem_id;
+        var sumPrice = document.getElementById(sumPrice_id).innerText;
+        var f_sumPrice = parseFloat(sumPrice.substr(1));
+        f_sumPrice += float_price;
+        var s_sumPrice = changeTwoDecimal_f(String(f_sumPrice));
+        document.getElementById(sumPrice_id).innerText = "¥" + s_sumPrice;
+        // 获取、设置全部商品总金额
+//        var s_goodsPrice = document.getElementById("goodsPrice").innerText;
+//        console.log("获取、商品总金额", s_goodsPrice, float_price);
+//        var f_goodsPrice = parseFloat(s_goodsPrice.substr(1));
+//        f_goodsPrice += float_price;
+//        s_goodsPrice = changeTwoDecimal_f(String(f_goodsPrice));
+//        console.log("设置全部商品总金额", s_goodsPrice);
+//        document.getElementById("goodsPrice").innerText = "¥" + s_goodsPrice;
+        SetGoodsInfo("Increment")
+    }
+    
+    // 设置所有商品总金额
+    function SetGoodsInfo(source) {
+        console.log("form:", source);
+        // 全部商品总数量
+        var goods_num = 0;
+        document.getElementById("goodsNum").innerText = String(goods_num);
+        // 全部商品总金额
+        var f_goodsPrice = 0.00;
+        document.getElementById("goodsPrice").innerText = "¥" + "0.00";
+        // 获取所有商品并循环
+        var item_list = document.getElementById("item-list").children;
+//        console.log(item_list, item_list.length);
+        for (var i=0;i<item_list.length-1;i++){
+            var current_item =item_list[i];
+            // 获取该商品的勾选状态
+            var checkbox = current_item.children[0].children[0];
+            // 如果是勾选状态，设置总商品数量及金额
+            if(checkbox.checked){
+                // 获取该商品的数量及金额
+                var item_num = current_item.children[5].children[0].children[1].innerText;
+                goods_num += parseInt(item_num);
+//                console.log("该商品的数量", itemNum);
+                document.getElementById("goodsNum").innerText = String(goods_num);
+                var s_price = current_item.children[6].innerText;
+                f_goodsPrice += parseFloat(s_price.substr(1));
+                var s_goodsPrice = changeTwoDecimal_f(String(f_goodsPrice));
+                document.getElementById("goodsPrice").innerText = "¥" + s_goodsPrice;
+            }
+        }
+
+    }
+    // 将字符串结果转换为2位小数格式
+    function changeTwoDecimal_f(x) {
+        var f_x;
+        f_x = parseFloat(x);
+        if (isNaN(f_x)) { // isNaN函数用于检查其参数是否是非数字值
+            alert('function:changeTwoDecimal->parameter error');
+            return false;
+        }
+        f_x = Math.round(x * 100) / 100;
+        var s_x = f_x.toString();
+        var pos_decimal = s_x.indexOf('.');
+        if (pos_decimal < 0) {
+            pos_decimal = s_x.length;
+            s_x += '.';
+        }
+        while (s_x.length <= pos_decimal + 2) {
+            s_x += '0';
+        }
+        return s_x;
     }
 </script>
 </body>

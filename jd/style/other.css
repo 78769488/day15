@@ -258,12 +258,15 @@ a {
 .hide {
     display: none;
 }
-.footer-content a{
+
+.footer-content a {
     margin: 10px;
 }
+
 .footer-content a:hover {
     color: #e22222;
 }
+
 .pg-header {
     height: 110px;
     background: url(../images/headbg.jpg) repeat-x left bottom;
@@ -317,11 +320,13 @@ a {
     padding-left: 110px;
     color: #e01222;
 }
-.form-item-tip{
+
+.form-item-tip {
     /*height: 21px;*/
     /*line-height: 21px;*/
 }
-.form-item-tip a{
+
+.form-item-tip a {
     color: blue;
 }
 
@@ -331,63 +336,73 @@ a {
     font-size: 12px;
     padding-top: 5px;
 }
-.getCode{
+
+.getCode {
     width: 110px;
     height: 46px;
     position: absolute;
-    right: 0; 
+    right: 0;
     top: 4px;
 }
+
 .getCode:hover {
     cursor: pointer;
 }
+
 .getPhoneCode {
     width: 110px;
     height: 46px;
     position: absolute;
-    right: 0; 
+    right: 0;
     top: 4px;
     background-color: #f2f2f2;
     border: none;
 }
+
 .getPhoneCode:hover {
     cursor: pointer;
 }
+
 .btnReg {
-    width:100%;
+    width: 100%;
     height: 54px;
     color: #ffffff;
     background-color: #e22222;
-    border:0;
+    border: 0;
     font-size: 18px;
     font-family: "Microsoft YaHei", serif;
 }
 
-.nav-right a{
-    margin:0 10px;
+.nav-right a {
+    margin: 0 10px;
 }
+
 .item-all, .item-dyf {
-    float:left;
+    float: left;
     width: 100px;
     font: 18px bold;
     font-family: "Microsoft YaHei", serif;
 }
+
 .item-all span:hover, .item-dyf span:hover {
-    color:red;
+    color: red;
     border-bottom: 2px solid #f10215;
 }
-.cart-title{
+
+.cart-title {
     background: #f3f3f3;
     border: 1px solid #e9e9e9;
     height: 32px;
     line-height: 32px;
-    margin:0 0 10px;
+    margin: 0 0 10px;
     padding: 5px 0;
 }
+
 .column {
     float: left;
     background: #f3f3f3;
 }
+
 .t-checkbox {
     width: 122px;
     height: 18px;
@@ -395,6 +410,7 @@ a {
     padding-top: 7px;
     padding-left: 11px;
 }
+
 .item-list {
     margin-top: 5px;
     border: 1px solid #f1f1f1;
@@ -402,22 +418,78 @@ a {
     width: 990px;
     /*height: 360px;*/
 }
+
 .item-list-item {
     float: left;
     height: 120px;
-    border-top:none;
+    border-top: none;
     border-bottom: 1px solid #aaaaaa;
     /*padding:0 10px 1px 40px;*/
 }
+
 .cell {
     padding-top: 15px;
     padding-bottom: 10px;
     float: left;
     position: relative;
 }
+
 .cell .item-checkbox {
     /*position: absolute;*/
     left: 0;
     width: 30px;
-    background:red;
+    background: red;
+}
+
+.decrement {
+    float: left;
+    width: 20px;
+    border-right: 1px solid #dddddd;
+}
+
+.itemNum {
+    float: left;
+    width: 38px;
+    border-right: 1px solid #dddddd;
+}
+
+.increment {
+    float: left;
+    width: 20px;
+}
+
+.item-name {
+    width: 208px;
+    height: 40px;
+    line-height: 20px;
+    padding: 15px 10px 0;
+}
+
+.item-prop {
+    width: 140px;
+    padding: 15px 20px 0;
+}
+
+.item-price {
+    width: 120px;
+    text-align: right;
+    padding-right: 40px;
+}
+.item-num{
+    width: 80px;text-align: center;
+}
+.item-num-item{
+    border: 1px solid #dddddd; width: 80px;height: 22px; line-height: 22px;
+}
+.item-sum{
+    width: 100px;text-align: right;padding-right: 40px
+}
+.item-action div:hover{
+    color: red;
+}
+.payment{
+    float: right;width: 100px;background-color: red;color: white;font-size: 18px;font-weight: bold;text-align: center;
+}
+.payment:hover{
+    cursor: pointer;
 }

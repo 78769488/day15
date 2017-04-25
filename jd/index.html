@@ -17,20 +17,20 @@
     <div class="w">
         <div class="nav-left">
             <div class="dorpdown" id="city">
-                <!--<div onmousemove="ShowCitys()" class="my-city" >武汉站</div>-->
-                <div class="my-city" >武汉站</div>
-                <div class="city-box dorpdown-box">
+                <div onmouseover="ShowCity()" onmouseout="HideCity()" class="my-city" id="myCity">武汉站</div>
+                <!--<div class="my-city" >武汉站</div>-->
+                <div class="city-box dorpdown-box hide" id="dorpdown-box">
                     <div class="city-list">
-                        <div class="city-name">北京</div>
-                        <div class="city-name">上海</div>
-                        <div class="city-name">南京</div>
-                        <div class="city-name">广州</div>
-                        <div class="city-name">武汉</div>
-                        <div class="city-name">天津</div>
-                        <div class="city-name">西安</div>
-                        <div class="city-name">重庆</div>
-                        <div class="city-name">昆明</div>
-                        <div class="city-name">保定</div>
+                        <div class="city-name" id="北京" onclick="SetMyCity('北京')">北京</div>
+                        <div class="city-name" id="上海" onclick="SetMyCity('上海')">上海</div>
+                        <div class="city-name" id="南京" onclick="SetMyCity('南京')">南京</div>
+                        <div class="city-name" id="广州" onclick="SetMyCity('广州')">广州</div>
+                        <div class="city-name" id="武汉" onclick="SetMyCity('武汉')">武汉</div>
+                        <div class="city-name" id="天津" onclick="SetMyCity('天津')">天津</div>
+                        <div class="city-name" id="西安" onclick="SetMyCity('西安')">西安</div>
+                        <div class="city-name" id="重庆" onclick="SetMyCity('重庆')">重庆</div>
+                        <div class="city-name" id="昆明" onclick="SetMyCity('昆明')">昆明</div>
+                        <div class="city-name" id="保定" onclick="SetMyCity('保定')">保定</div>
                     </div>
                 </div>
             </div>
@@ -271,8 +271,8 @@
                     <div class="user_info_show">
                         <p class="user_info_tip">Hi, 欢迎来到京东!</p>
                         <p>
-                            <a class="user_info_login">登录</a>
-                            <a class="user_info_reg">注册</a>
+                            <a href="login.html" class="user_info_login">登录</a>
+                            <a href="reg.html" class="user_info_reg">注册</a>
                         </p>
                     </div>
                 </div>
@@ -345,21 +345,21 @@
                     <div class="sk_cd_main J_sk_cd_main">
                         <div class="cd clearfix">
                             <div class="cd_item cd_hour">
-                                <span class="cd_item_txt">01</span>
+                                <span class="cd_item_txt" id="hour">01</span>
                             </div>
                             <div class="cd_split">
                                 <i class="cd_split_dot cd_split_top"></i>
                                 <i class="cd_split_dot cd_split_bottom"></i>
                             </div>
                             <div class="cd_item cd_minute">
-                                <span class="cd_item_text">27</span>
+                                <span class="cd_item_text" id="minute">27</span>
                             </div>
                             <div class="cd_split">
                                 <i class="cd_split_dot cd_split_top"></i>
                                 <i class="cd_split_dot cd_split_bottom"></i>
                             </div>
                             <div class="cd_item cd_second">
-                                <span class="cd_item_text">37</span>
+                                <span class="cd_item_text" id="second">37</span>
                             </div>
                         </div>
                     </div>
@@ -491,9 +491,38 @@
         </div>
     </div>
 </div>
-<div id="footer" style="background: #440106; height: 100px;">
-    脚部
+
+<!--底部-->
+<div id="footer">
+    <div class="w">
+        <div class="footer-content"  style="padding-top:50px;text-align: center; border-top: 1px solid #dddddd;">
+            <a>关于我们</a>
+            |
+            <a>联系我们</a>
+            |
+            <a>人才招聘</a>
+            |
+            <a>商家入驻</a>
+            |
+            <a>广告服务</a>
+            |
+            <a>手机京东</a>
+            |
+            <a>友情链接</a>
+            |
+            <a>京东社区</a>
+            |
+            <a>京东公益</a>
+            |
+            <a>English Site</a>
+        </div>
+        <div class="copyright" style="text-align: center;margin-top: 5px">
+            Copyright&nbsp;©&nbsp;2004-2017&nbsp;&nbsp;京东JD.com&nbsp;版权所有
+        </div>
+    </div>
 </div>
-<script src="js/jd.js"></script>
+<script src="js/jd.js">
+</script>
+
 </body>
 </html>
